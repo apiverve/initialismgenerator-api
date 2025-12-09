@@ -1,0 +1,84 @@
+openapi: 3.0.4
+info:
+  title: Initialism Generator
+  description: Initialism Generator creates initialisms from phrases by extracting first letters of significant words, with options for filtering and formatting.
+  termsOfService: https://apiverve.com/terms/
+  contact:
+    name: APIVerve Support
+    email: hello@apiverve.com
+    url: https://apiverve.com/contact
+  version: 1.0.9
+externalDocs:
+  description: Learn more about APIVerve
+  url: https://docs.apiverve.com?utm_source=openapi
+servers:
+- url: https://api.apiverve.com/
+paths:
+  /v1/initialismgenerator:
+    post:
+      summary: Generate Initialism
+      description: Initialism Generator creates initialisms from phrases by extracting first letters of significant words, with options for filtering and formatting.
+      operationId: initialismgenerator
+      parameters: []
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: status
+                  error:
+                    type: string
+                    description: error
+                  data:
+                    type: string
+                    description: data
+              example:
+                status: ok
+                error: 
+                data:
+                  initialism: API
+                  phrase: Application Programming Interface
+                  wordCount: 3
+                  words:
+                  - Application
+                  - Programming
+                  - Interface
+        '401':
+          description: Your request was not authorized, or your API Key was invalid
+        '404':
+          description: Requested resource was not found
+        '500':
+          description: A server error has occured, try again later
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                phrase:
+                  type: string
+                  description: Phrase to convert to initialism (max 500 characters)
+                  example: Application Programming Interface
+                excludeCommonWords:
+                  type: boolean
+                  description: Exclude common words like 'the', 'of', 'and'
+                  default: false
+              required:
+              - phrase
+              example:
+                phrase: Application Programming Interface
+                uppercase: true
+components:
+  securitySchemes:
+    api_key:
+      type: apiKey
+      name: x-api-key
+      in: header
+security:
+- api_key: []
