@@ -1,23 +1,25 @@
 openapi: 3.0.4
 info:
   title: Initialism Generator
-  description: Initialism Generator creates initialisms from phrases by extracting first letters of significant words, with options for filtering and formatting.
+  description: >-
+    Initialism Generator creates initialisms from phrases by extracting first
+    letters of significant words, with options for filtering and formatting.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
     email: hello@apiverve.com
     url: https://apiverve.com/contact
-  version: 1.0.9
+  version: 1.0.0
 externalDocs:
   description: Learn more about APIVerve
   url: https://docs.apiverve.com?utm_source=openapi
 servers:
-- url: https://api.apiverve.com/
+  - url: https://api.apiverve.com/
 paths:
   /v1/initialismgenerator:
     post:
       summary: Generate Initialism
-      description: Initialism Generator creates initialisms from phrases by extracting first letters of significant words, with options for filtering and formatting.
+      description: Generate initialism from phrase
       operationId: initialismgenerator
       parameters: []
       responses:
@@ -35,25 +37,25 @@ paths:
                     type: string
                     description: error
                   data:
-                    type: string
+                    type: object
                     description: data
               example:
                 status: ok
-                error: 
+                error: null
                 data:
                   initialism: API
                   phrase: Application Programming Interface
                   wordCount: 3
                   words:
-                  - Application
-                  - Programming
-                  - Interface
+                    - Application
+                    - Programming
+                    - Interface
         '401':
           description: Your request was not authorized, or your API Key was invalid
         '404':
           description: Requested resource was not found
         '500':
-          description: A server error has occured, try again later
+          description: A server error has occurred, try again later
       requestBody:
         required: true
         content:
@@ -64,16 +66,14 @@ paths:
                 phrase:
                   type: string
                   description: Phrase to convert to initialism (max 500 characters)
-                  example: Application Programming Interface
                 excludeCommonWords:
                   type: boolean
                   description: Exclude common words like 'the', 'of', 'and'
-                  default: false
+                uppercase:
+                  type: boolean
+                  description: Return the initialism in uppercase
               required:
-              - phrase
-              example:
-                phrase: Application Programming Interface
-                uppercase: true
+                - phrase
 components:
   securitySchemes:
     api_key:
@@ -81,4 +81,7 @@ components:
       name: x-api-key
       in: header
 security:
-- api_key: []
+  - api_key: []
+sampleRequest:
+  phrase: Application Programming Interface
+  uppercase: true
