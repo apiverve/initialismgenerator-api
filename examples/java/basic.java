@@ -12,13 +12,8 @@ public class BasicExample {
         InitialismGeneratorAPIClient client = new InitialismGeneratorAPIClient("YOUR_API_KEY_HERE");
 
         try {
-            // Request body
-            Map&lt;String, Object&gt; parameters &#x3D; new HashMap&lt;&gt;();
-        parameters.put(&quot;phrase&quot;, &quot;Application Programming Interface&quot;);
-        parameters.put(&quot;uppercase&quot;, true);
-
-            // Execute the API request
-            APIResponse response = client.execute(parameters);
+            // Execute the API request (no parameters required)
+            APIResponse response = client.execute(null);
 
             // Check if the request was successful
             if (response.isSuccess()) {
