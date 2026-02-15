@@ -12,16 +12,20 @@ namespace APIVerve.API.InitialismGenerator
     {
         /// <summary>
         /// Phrase to convert to initialism (max 500 characters)
-        /// Example: Application Programming Interface
         /// </summary>
         [JsonProperty("phrase")]
         public string Phrase { get; set; }
 
         /// <summary>
         /// Exclude common words like 'the', 'of', 'and'
-        /// Example: true
         /// </summary>
         [JsonProperty("excludeCommonWords")]
         public string ExcludeCommonWords { get; set; }
+
+        /// <summary>
+        /// Return the initialism in uppercase
+        /// </summary>
+        [JsonProperty("uppercase")]
+        public string Uppercase { get; set; }
     }
 }
