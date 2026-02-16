@@ -44,7 +44,10 @@ from apiverve_initialismgenerator.apiClient import InitialismgeneratorAPIClient
 # Initialize the client with your APIVerve API key
 api = InitialismgeneratorAPIClient("[YOUR_API_KEY]")
 
-query = { "phrase": "Application Programming Interface", "uppercase": true }
+query = {
+    "phrase": "Application Programming Interface",
+    "uppercase": true
+}
 
 try:
     # Make the API call
@@ -82,7 +85,10 @@ Using the API client, you can perform requests to the API.
 ###### Define Query
 
 ```python
-query = { "phrase": "Application Programming Interface", "uppercase": true }
+query = {
+    "phrase": "Application Programming Interface",
+    "uppercase": true
+}
 ```
 
 ###### Simple Request
@@ -127,7 +133,10 @@ from apiverve_initialismgenerator.apiClient import InitialismgeneratorAPIClient,
 
 api = InitialismgeneratorAPIClient("[YOUR_API_KEY]")
 
-query = { "phrase": "Application Programming Interface", "uppercase": true }
+query = {
+    "phrase": "Application Programming Interface",
+    "uppercase": true
+}
 
 try:
     result = api.execute(query)
@@ -148,7 +157,10 @@ from apiverve_initialismgenerator.apiClient import InitialismgeneratorAPIClient,
 
 api = InitialismgeneratorAPIClient("[YOUR_API_KEY]")
 
-query = { "phrase": "Application Programming Interface", "uppercase": true }
+query = {
+    "phrase": "Application Programming Interface",
+    "uppercase": true
+}
 
 try:
     result = api.execute(query)
@@ -182,7 +194,10 @@ The client supports the context manager protocol for automatic resource cleanup:
 ```python
 from apiverve_initialismgenerator.apiClient import InitialismgeneratorAPIClient, InitialismgeneratorAPIClientError
 
-query = { "phrase": "Application Programming Interface", "uppercase": true }
+query = {
+    "phrase": "Application Programming Interface",
+    "uppercase": true
+}
 
 # Using context manager ensures proper cleanup
 with InitialismgeneratorAPIClient("[YOUR_API_KEY]") as api:
@@ -208,7 +223,10 @@ from apiverve_initialismgenerator.apiClient import InitialismgeneratorAPIClient
 # Enable debug mode
 api = InitialismgeneratorAPIClient("[YOUR_API_KEY]", debug=True)
 
-query = { "phrase": "Application Programming Interface", "uppercase": true }
+query = {
+    "phrase": "Application Programming Interface",
+    "uppercase": true
+}
 
 # Debug information will be printed to console
 result = api.execute(query)
@@ -223,8 +241,12 @@ from apiverve_initialismgenerator.apiClient import InitialismgeneratorAPIClient
 
 api = InitialismgeneratorAPIClient("[YOUR_API_KEY]")
 
+query = {
+    "phrase": "Application Programming Interface",
+    "uppercase": true
+}
+
 try:
-    query = { "phrase": "Application Programming Interface", "uppercase": true }
     result = api.execute(query)
     print(result)
 finally:
