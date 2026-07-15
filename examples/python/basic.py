@@ -14,14 +14,21 @@ API_URL = 'https://api.apiverve.com/v1/initialismgenerator'
 
 def call_initialismgenerator_api():
     """
-    Make a GET request to the Initialism Generator API
+    Make a POST request to the Initialism Generator API
     """
     try:
+        # Request body
+        request_body &#x3D; {
+    &#x27;phrase&#x27;: &#x27;Application Programming Interface&#x27;,
+    &#x27;uppercase&#x27;: true
+}
+
         headers = {
-            'x-api-key': API_KEY
+            'x-api-key': API_KEY,
+            'Content-Type': 'application/json'
         }
 
-        response = requests.get(API_URL, headers=headers)
+        response = requests.post(API_URL, headers=headers, json=request_body)
 
         # Raise exception for HTTP errors
         response.raise_for_status()
