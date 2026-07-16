@@ -20,12 +20,12 @@ namespace APIVerve.API.InitialismGenerator
         /// Exclude common words like 'the', 'of', 'and'
         /// </summary>
         [JsonProperty("excludeCommonWords")]
-        public string ExcludeCommonWords { get; set; }
+        public bool? ExcludeCommonWords { get; set; }
 
         /// <summary>
         /// Return the initialism in uppercase
         /// </summary>
         [JsonProperty("uppercase")]
-        public string Uppercase { get; set; }
+        public bool? Uppercase { get; set; }
     }
 }
