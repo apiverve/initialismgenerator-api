@@ -18,7 +18,7 @@ servers:
 paths:
   /v1/initialismgenerator:
     post:
-      summary: Generate Initialism
+      summary: Initialism Generator
       description: Generate initialism from phrase
       operationId: initialismgenerator
       parameters: []
