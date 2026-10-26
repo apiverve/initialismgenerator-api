@@ -1,7 +1,7 @@
 {
     "name": "apiverve/initialismgenerator",
     "description": "Initialism Generator creates initialisms from phrases by extracting first letters of significant words, with options for filtering and formatting.",
-    "version": "1.2.2",
+    "version": "1.2.3",
     "type": "library",
     "license": "MIT",
     "authors": [
