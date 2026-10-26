@@ -1,6 +1,6 @@
 {
   "name": "@apiverve/initialismgenerator",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Initialism Generator creates initialisms from phrases by extracting first letters of significant words, with options for filtering and formatting.",
   "main": "index.js",
   "types": "index.d.ts",
