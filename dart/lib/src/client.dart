@@ -46,7 +46,7 @@ final _formatPatterns = {
 
 /// Initialism Generator API client.
 ///
-/// For more information, visit: https://apiverve.com/marketplace/initialismgenerator?utm_source=dart&utm_medium=readme
+/// For more information, visit: https://apiverve.com/marketplace/initialismgenerator?utm_source=dart&utm_medium=referral&utm_content=readme
 ///
 /// Parameters:
 /// * [phrase] (required) - Phrase to convert to initialism (max 500 characters) [maxLength: 500]

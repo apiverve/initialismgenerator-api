@@ -1,7 +1,7 @@
 name: apiverve_initialismgenerator
-description: Initialism Generator creates initialisms from phrases by extracting first letters of significant words, with options for filtering and formatting.
-version: 1.1.14
-homepage: https://apiverve.com/marketplace/initialismgenerator?utm_source=dart&utm_medium=homepage
+description: "Initialism Generator creates initialisms from phrases by extracting first letters of significant words, with options for filtering and formatting."
+version: 1.2.4
+homepage: https://apiverve.com/marketplace/initialismgenerator?utm_source=dart&utm_medium=referral&utm_content=homepage
 repository: https://github.com/apiverve/initialismgenerator-api/tree/main/dart
 
 environment:

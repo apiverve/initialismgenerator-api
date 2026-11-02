@@ -2,7 +2,7 @@
 ///
 /// Initialism Generator creates initialisms from phrases by extracting first letters of significant words, with options for filtering and formatting.
 ///
-/// For more information, visit: https://apiverve.com/marketplace/initialismgenerator?utm_source=dart&utm_medium=readme
+/// For more information, visit: https://apiverve.com/marketplace/initialismgenerator?utm_source=dart&utm_medium=referral&utm_content=readme
 library apiverve_initialismgenerator;
 
 export 'src/client.dart';
