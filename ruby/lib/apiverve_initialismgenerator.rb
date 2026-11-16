@@ -4,6 +4,6 @@ require_relative "apiverve_initialismgenerator/client"
 
 module APIVerve
   module Initialismgenerator
-    VERSION = "1.2.5"
+    VERSION = "1.2.6"
   end
 end
